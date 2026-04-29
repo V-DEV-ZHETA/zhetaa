@@ -4,32 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>zheta - web developer</title>
+
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background: #0f172a;
+            color: #e2e8f0;
+        }
+
+        .hero {
+            padding: 120px 20px;
+            text-align: center;
+        }
+
+        .text-accent {
+            color: #38bdf8;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
 </head>
 <body>
 
-    <!-- ==================== NAVBAR ==================== -->
-    <nav class="navbar" id="navbar">
-        <div class="container nav-container">
-            <a href="#home" class="logo"></a>
-            <ul class="nav-menu">
-                <!-- <li><a href="#about" class="nav-link">About</a></li> -->
-                <li><a href="https://videy.co/v/?id=MisH29bC1" class="nav-link">Experience</a></li>
-                <li><a href="https://videy.co/v/?id=MisH29bC1" class="nav-link">Achievement</a></li>
-                <li><a href="#skills" class="nav-link">Skills</a></li>
-                <li><a hre="https://drive.google.com/file/d/1lXhACBeYu5dG69TdMpE3G36zOmFu6jWH/view?usp=drive_link" class="nav-link">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
+<!-- ==================== HERO ==================== -->
+<section class="hero">
+    <h1>zhetauwu <span class="text-accent">web archive</span></h1>
 
-    <!-- ==================== HERO / HOME ==================== -->
-    <section id="home" class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1 class="hero-title">zhetauwu <span class="text-accent">web archive</span></h1>
-                <h2 class="hero-subtitle">Web Developer & IT Network Engineer</h2>
-                <p class="hero-description">
+    <p id="encoded">
 \x5a\x58\x68\x6c\x63\x6e\x4a\x6c\x63\x33\x52\x79\x61\x57\x46\x73\x49\x48\x4a\x6c
 \x62\x47\x56\x32\x59\x57\x35\x30\x4c\x43\x42\x68\x5a\x43\x42\x30\x61\x47\x55\x67
 \x64\x47\x39\x77\x49\x48\x4e\x6c\x59\x33\x4a\x6c\x64\x43\x42\x31\x62\x6d\x52\x6c
@@ -40,210 +45,75 @@
 \x62\x57\x46\x30\x63\x6d\x6c\x34\x49\x47\x4a\x6c\x64\x57\x6c\x6e\x68\x43\x42\x30
 \x61\x47\x55\x67\x64\x47\x39\x70\x62\x6d\x63\x67\x61\x58\x4d\x67\x59\x57\x4e\x30
 \x64\x57\x46\x73\x63\x32\x39\x75\x49\x47\x46\x31\x64\x47\x68\x6c\x62\x6e\x52\x70
-\x59\x32\x46\x73\x4c\x67\x3d\x3d\x0a\x38\x32\x39\x31\x30\x34\x37\x35\x36\x31\x38
-\x32\x37\x33\x36\x34\x35\x35\x31\x30\x31\x39\x32\x38\x33\x37\x34\x36\x35\x35\x31
-\x30\x32\x39\x33\x38\x34\x37\x35\x36\x31\x30\x32\x39\x33\x38\x34\x37\x35\x36\x31
-\x30\x32\x39\x33\x38\x34\x37\x35\x36\x31\x30\x32\x39\x33\x38\x34\x37\x35\x36\x31
-\x0a\x5b\x4b\x45\x59\x3a\x20\x53\x49\x4c\x45\x4e\x54\x5f\x57\x48\x49\x53\x50\x45
-                </p>
-                <a hre="https://drive.google.com/file/d/1lXhACBeYu5dG69TdMpE3G36zOmFu6jWH/view?usp=drive_link" class="btn btn-primary" target="_blank">Click For Die</a>
-            </div>
-        </div>
-    </section>
+\x59\x32\x46\x73\x4c\x67\x3d\x3d
+    </p>
 
-    <!-- <section id="about" class="about section-padding">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Tentang Saya</h2>
-                <div class="underline"></div>
-            </div>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>
-                        Saya memiliki latar belakang di bidang teknologi informasi dengan fokus pada pengembangan front-end. Saya senang belajar teknologi baru dan menerjemahkan desain menjadi kode yang bersih.
-                    </p>
-                    <p>
-                        Tujuan karier saya adalah menjadi seorang Full Stack Developer yang handal dan berkontribusi dalam proyek-proyek yang berdampak positif bagi masyarakat.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section> -->
+    <button onclick="hint()">hint?</button>
+</section>
 
-<!-- 
-    <section id="experience" class="experience section-padding bg-dark">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title text-light">Pengalaman</h2>
-                <div class="underline bg-accent"></div>
-            </div>
-            <div class="experience-grid">
-                <div class="card">
-                    <h3 class="card-title">Front-end Developer Intern</h3>
-                    <span class="card-meta">PT PLN NUSA DAYA | 2025</span>
-                    <p class="card-desc">
-                        Berkontribusi dalam pengembangan UI website perusahaan menggunakan HTML, CSS, dan JavaScript. Berkolaborasi dengan tim desain untuk implementasi pixel-perfect.
-                    </p>
-                </div>
-                <div class="card">
-                    <h3 class="card-title">Fullstack Web Developer</h3>
-                    <span class="card-meta">Deka Web Application Agency | 2025</span>
-                    <p class="card-desc">
-                        Memimpin tim IT dalam mengelola website dan sistem informasi organisasi. Mengadakan workshop coding untuk anggota baru.
-                    </p>
-                </div>
-                <div class="card">
-                    <h3 class="card-title">Freelance Web Designer</h3>
-                    <span class="card-meta">Self-employed | 2025</span>
-                    <p class="card-desc">
-                        Mengerjakan proyek desain website untuk UMKM lokal, termasuk desain responsif dan optimasi SEO dasar.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
+<!-- ==================== HIDDEN ADMIN ==================== -->
+<div id="admin" class="hidden">
+    <h2>Admin Panel</h2>
+    <p>Access restricted.</p>
 
-=
-    <section id="achievement" class="achievement section-padding">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Prestasi</h2>
-                <div class="underline"></div>
-            </div>
-            <div class="achievement-list">
-                <div class="achievement-item">
-                    <div class="achievement-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
-                    </div>
-                    <div class="achievement-info">
-                        <h3>Juara 1 Hackathon Nasional</h3>
-                        <p>Mengembangkan aplikasi solusi smart city dalam waktu 24 jam.</p>
-                    </div>
-                </div>
-                <div class="achievement-item">
-                    <div class="achievement-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-                    </div>
-                    <div class="achievement-info">
-                        <h3>Sertifikasi Google UX Design</h3>
-                        <p>Menyelesaikan serangkaian kursus desain pengalaman pengguna dari Google.</p>
-                    </div>
-                </div>
-                <div class="achievement-item">
-                    <div class="achievement-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
-                    </div>
-                    <div class="achievement-info">
-                        <h3></h3>
-                        <p></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    <input type="text" id="user" placeholder="username">
+    <input type="password" id="pass" placeholder="password">
+    <button onclick="login()">Login</button>
 
+    <p id="msg"></p>
+</div>
 
-    <section id="skills" class="skills section-padding bg-dark">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title text-light">Keahlian</h2>
-                <div class="underline bg-accent"></div>
-            </div>
-            <div class="skills-container">
-                <div class="skill-box">
-                    <div class="skill-header">
-                        <span class="skill-name">HTML5 & CSS3</span>
-                        <span class="skill-percent">90%</span>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: 90%;"></div>
-                    </div>
-                </div>
-                <div class="skill-box">
-                    <div class="skill-header">
-                        <span class="skill-name">JavaScript (ES6+)</span>
-                        <span class="skill-percent">85%</span>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: 85%;"></div>
-                    </div>
-                </div>
-                <div class="skill-box">
-                    <div class="skill-header">
-                        <span class="skill-name">UI/UX Design (Figma)</span>
-                        <span class="skill-percent">80%</span>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: 80%;"></div>
-                    </div>
-                </div>
-                <div class="skill-box">
-                    <div class="skill-header">
-                        <span class="skill-name">React.js</span>
-                        <span class="skill-percent">75%</span>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: 75%;"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+<!-- ==================== SCRIPT ==================== -->
+<script>
 
+// ==================== CONSOLE HINT ====================
+console.log("%c[ SYSTEM BREACH DETECTED ]", "color:red; font-size:16px;");
+console.log("You are not supposed to see this.");
+console.log("Clue: Decode what is hidden.");
+console.log("dev-note: try accessing /admin-dev");
 
-    <section id="contact" class="contact section-padding">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Hubungi Saya</h2>
-                <div class="underline"></div>
-            </div>
-            <div class="contact-wrapper">
-                <div class="contact-form-container">
-                    <form class="contact-form" id="contactForm">
-                        <div class="form-group">
-                            <label for="name">Nama</label>
-                            <input type="text" id="name" name="name" placeholder="Masukkan nama Anda" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" placeholder="email@example.com" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Pesan</label>
-                            <textarea id="message" name="message" rows="5" placeholder="Tulis pesan Anda di sini..." required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary btn-full">Kirim Pesan</button>
-                    </form>
-                </div>
-                <div class="contact-info">
-                    <h3>Mari Terhubung</h3>
-                    <p>Anda dapat menghubungi saya melalui form di samping atau melalui sosial media berikut:</p>
-                    <div class="social-links">
-                        <a href="#" class="social-link" aria-label="LinkedIn">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
-                            LinkedIn
-                        </a>
-                        <a href="https://github.com/V-DEV-ZHETA" class="social-link" aria-label="GitHub">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-                            GitHub
-                        </a>
-                        <a href="https://www.instagram.com/meowzheta/" class="social-link" aria-label="Instagram">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
-                            Instagram
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+// ==================== HINT BUTTON ====================
+function hint(){
+    alert("Tidak semua teks bisa dibaca langsung...");
+}
 
+// ==================== FAKE ROUTING ====================
+if(window.location.pathname.includes("admin-dev")){
+    document.querySelector(".hero").style.display = "none";
+    document.getElementById("admin").classList.remove("hidden");
+}
 
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2024 Nama Anda. All rights reserved.</p>
-        </div>
-    </footer>
+// ==================== FAKE LOGIN ====================
+function login(){
+    let u = document.getElementById("user").value;
+    let p = document.getElementById("pass").value;
 
-    <script src="script.js"></script>
+    // intentionally vulnerable logic 😈
+    if(u.includes("'") || p.includes("'")){
+        document.getElementById("msg").innerText = "Access Granted\nflag{sql_bypass_success}";
+    } else {
+        document.getElementById("msg").innerText = "Access Denied";
+    }
+}
+
+// ==================== HIDDEN FLAG ====================
+// jangan terlalu obvious 😏
+let _0xabc = ["ZmxhZ3tmaXJzdF9icmVhY2h9"];
+function reveal(){
+    return atob(_0xabc[0]);
+}
+
+// developer note:
+// someone forgot to remove this function 🤫
+
+</script>
+
+<!--
+    nothing to see here...
+
+    or maybe:
+    flag_part: ZH3TA_
+-->
+
 </body>
-</html> -->
+</html>
