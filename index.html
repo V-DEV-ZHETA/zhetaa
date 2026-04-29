@@ -1,38 +1,155 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>zheta - web developer</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zheta System Breach</title>
 
-    <link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
 
-    <style>
-        body {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            background: #0f172a;
-            color: #e2e8f0;
-        }
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
 
-        .hero {
-            padding: 120px 20px;
-            text-align: center;
-        }
+body{
+    font-family:'JetBrains Mono',monospace;
+    background: radial-gradient(circle at top,#020617,#000);
+    color:#e2e8f0;
+    overflow-x:hidden;
+}
 
-        .text-accent {
-            color: #38bdf8;
-        }
+/* subtle scanline */
+body::after{
+    content:"";
+    position:fixed;
+    width:100%;
+    height:100%;
+    pointer-events:none;
+    background:repeating-linear-gradient(
+        transparent,
+        transparent 2px,
+        rgba(255,255,255,0.02) 3px
+    );
+}
 
-        .hidden {
-            display: none;
-        }
-    </style>
+/* HERO */
+.hero{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+h1{
+    font-size:2.5rem;
+    margin-bottom:10px;
+}
+
+.text-accent{
+    color:#38bdf8;
+    text-shadow:0 0 10px rgba(56,189,248,0.6);
+}
+
+#encoded{
+    margin-top:20px;
+    max-width:700px;
+    font-size:0.85rem;
+    color:#64748b;
+    line-height:1.6;
+    cursor:pointer;
+    transition:.3s;
+}
+#encoded:hover{color:#94a3b8}
+
+/* BUTTON */
+button{
+    margin-top:20px;
+    padding:10px 18px;
+    background:transparent;
+    border:1px solid #38bdf8;
+    color:#38bdf8;
+    cursor:pointer;
+    transition:.3s;
+}
+button:hover{
+    background:#38bdf8;
+    color:#020617;
+}
+
+/* ADMIN */
+#admin{
+    display:none;
+    flex-direction:column;
+    align-items:center;
+    margin-top:120px;
+}
+
+#admin h2{
+    color:#22c55e;
+    text-shadow:0 0 10px rgba(34,197,94,.5);
+}
+
+input{
+    margin:8px;
+    padding:10px;
+    width:220px;
+    background:#020617;
+    border:1px solid #334155;
+    color:#e2e8f0;
+}
+input:focus{border-color:#38bdf8;outline:none}
+
+/* TERMINAL */
+.terminal{
+    margin-top:20px;
+    padding:15px;
+    width:320px;
+    background:#020617;
+    border:1px solid #334155;
+    font-size:0.85rem;
+    color:#22c55e;
+    box-shadow:0 0 20px rgba(0,0,0,0.5);
+    white-space:pre-line;
+}
+
+/* GLITCH */
+.glitch{
+    position:relative;
+}
+.glitch::before,
+.glitch::after{
+    content:attr(data-text);
+    position:absolute;
+    left:0;
+}
+.glitch::before{
+    color:#f43f5e;
+    z-index:-1;
+    animation:glitch 1s infinite;
+}
+.glitch::after{
+    color:#22c55e;
+    z-index:-2;
+    animation:glitch 1s infinite reverse;
+}
+@keyframes glitch{
+    0%{transform:translate(0)}
+    20%{transform:translate(-2px,2px)}
+    40%{transform:translate(-2px,-2px)}
+    60%{transform:translate(2px,2px)}
+    80%{transform:translate(2px,-2px)}
+    100%{transform:translate(0)}
+}
+</style>
 </head>
+
 <body>
 
-<!-- ==================== HERO ==================== -->
-<section class="hero">
-    <h1>zhetauwu <span class="text-accent">web archive</span></h1>
+<!-- HERO -->
+<section class="hero" id="hero">
+<div>
+    <h1 class="glitch" data-text="zhetauwu">zhetauwu</h1>
+    <p class="text-accent">system archive</p>
 
     <p id="encoded">
 \x5a\x58\x68\x6c\x63\x6e\x4a\x6c\x63\x33\x52\x79\x61\x57\x46\x73\x49\x48\x4a\x6c
@@ -49,70 +166,76 @@
     </p>
 
     <button onclick="hint()">hint?</button>
+</div>
 </section>
 
-<!-- ==================== HIDDEN ADMIN ==================== -->
-<div id="admin" class="hidden">
+<!-- ADMIN -->
+<div id="admin">
     <h2>Admin Panel</h2>
-    <p>Access restricted.</p>
+    <p>Access restricted</p>
 
     <input type="text" id="user" placeholder="username">
     <input type="password" id="pass" placeholder="password">
     <button onclick="login()">Login</button>
 
-    <p id="msg"></p>
+    <div class="terminal" id="msg"></div>
 </div>
 
-<!-- ==================== SCRIPT ==================== -->
 <script>
 
-// ==================== CONSOLE HINT ====================
-console.log("%c[ SYSTEM BREACH DETECTED ]", "color:red; font-size:16px;");
-console.log("You are not supposed to see this.");
-console.log("Clue: Decode what is hidden.");
-console.log("dev-note: try accessing /admin-dev");
+// ===== CONSOLE LORE =====
+console.log("%c[ SYSTEM BREACH DETECTED ]","color:red;font-size:14px;");
+console.log("Hint: decode the strange text");
+console.log("dev-note: /admin-dev");
 
-// ==================== HINT BUTTON ====================
+// ===== HINT =====
 function hint(){
     alert("Tidak semua teks bisa dibaca langsung...");
 }
 
-// ==================== FAKE ROUTING ====================
-if(window.location.pathname.includes("admin-dev")){
-    document.querySelector(".hero").style.display = "none";
-    document.getElementById("admin").classList.remove("hidden");
+// ===== ROUTE SIMULASI =====
+if(location.pathname.includes("admin-dev")){
+    document.getElementById("hero").style.display="none";
+    document.getElementById("admin").style.display="flex";
 }
 
-// ==================== FAKE LOGIN ====================
+// ===== LOGIN BYPASS =====
 function login(){
-    let u = document.getElementById("user").value;
-    let p = document.getElementById("pass").value;
+    let u=document.getElementById("user").value;
+    let p=document.getElementById("pass").value;
 
-    // intentionally vulnerable logic 😈
-    if(u.includes("'") || p.includes("'")){
-        document.getElementById("msg").innerText = "Access Granted\nflag{sql_bypass_success}";
-    } else {
-        document.getElementById("msg").innerText = "Access Denied";
+    if(u.includes("'")||p.includes("'")){
+        typeText(`> checking credentials...
+> bypassing security...
+> access granted
+
+flag{sql_bypass_success}`);
+    }else{
+        typeText("> access denied");
     }
 }
 
-// ==================== HIDDEN FLAG ====================
-// jangan terlalu obvious 😏
-let _0xabc = ["ZmxhZ3tmaXJzdF9icmVhY2h9"];
-function reveal(){
-    return atob(_0xabc[0]);
+// ===== TYPING EFFECT =====
+function typeText(text){
+    let el=document.getElementById("msg");
+    el.innerText="";
+    let i=0;
+    let interval=setInterval(()=>{
+        el.innerText+=text[i];
+        i++;
+        if(i>=text.length) clearInterval(interval);
+    },20);
 }
 
-// developer note:
-// someone forgot to remove this function 🤫
+// ===== HIDDEN FLAG =====
+let _0xabc=["ZmxhZ3tmaXJzdF9icmVhY2h9"];
+function reveal(){return atob(_0xabc[0]);}
 
 </script>
 
 <!--
-    nothing to see here...
-
-    or maybe:
-    flag_part: ZH3TA_
+flag_part: ZH3TA_
+hint: try console -> reveal()
 -->
 
 </body>
